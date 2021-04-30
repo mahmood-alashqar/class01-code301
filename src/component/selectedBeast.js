@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 // import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-class Model extends React.Component {
+class selectedBeast extends React.Component {
 
     render()
     {
@@ -56,4 +56,4 @@ class Model extends React.Component {
         }
     };
 }
-export default Model;
+export default selectedBeast;

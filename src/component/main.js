@@ -1,14 +1,15 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import data from '../Assets/data.json';
+
+// import data from '../Assets/data.json';
 import { CardColumns } from 'react-bootstrap';
 class Main extends React.Component {
     render() {
-        console.log(data);
+        console.log(this.props.data);
         return (
             <div>
                 <CardColumns>
-                    {data.map(data => {
+                    {this.props.data.map(data => {
 
                         return (<HornedBeasts img={data.image_url}
                             title={data.title}
