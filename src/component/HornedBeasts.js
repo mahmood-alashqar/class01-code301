@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
+import Button from 'react-bootstrap/Button';
 class HornedBeasts extends React.Component {
     constructor(props) {
         super(props);
@@ -25,13 +25,14 @@ return (
           <Card.Body>
             <Card.Title> {this.props.title}</Card.Title>
             {/* <Card.Img>onClick= {this.increaseCount} src={this.props.img} alt="the img"</Card.Img> */}
-            <Card.Img onClick={this.increaseCount} src={this.props.img} />
+            <Card.Img  onClick={() => this.props.viewBeast(this.props.img,this.state.count)} src={this.props.img} data-target="#carouselExample" data-slide-to="0" />
             <Card.Text>
               {this.props.disc}
             </Card.Text>
             <Card.Text>
               💖 {this.state.count}
             </Card.Text>
+            <Button variant="primary" onClick={this.increaseCount} >Likes </Button>
           </Card.Body>
         </Card>
         <br />

@@ -1,22 +1,24 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import data from '../Assets/data.json';
+
+// import data from '../Assets/data.json';
+import { CardColumns } from 'react-bootstrap';
 class Main extends React.Component {
-    render()
-    {console.log(data);
-return (
-    <div>
-        
-       {  data.map( data =>  {
+    render() {
+        console.log(this.props.data);
+        return (
+            <div>
+                <CardColumns>
+                    {this.props.data.map(data => {
 
-return(<HornedBeasts   img ={data.image_url}
-title = {data.title}
-disc={data.description} />)
-            
-        })}
+                        return (<HornedBeasts img={data.image_url}
+                            title={data.title}
+                            disc={data.description} viewBeast={this.props.viewBeast} />)
 
-    </div>
-)
+                    })}
+                </CardColumns>
+            </div>
+        )
     };
 }
 export default Main;
