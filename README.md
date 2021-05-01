@@ -1,4 +1,4 @@
-Number and name of feature: "2" ==> forEacs & map
+Number and name of feature: "4" ==> forEacs & map & filter & sort
 
 Estimate of time needed to complete: 4 hours
 
